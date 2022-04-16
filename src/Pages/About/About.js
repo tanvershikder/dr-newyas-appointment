@@ -14,8 +14,13 @@ const About = () => {
             <h4 className='myName welcome'>Tanver Sikdar</h4>
 
             <div className='container'>
+                <h4>About Me :</h4>
+                <p>I am tanver sikdar , i am a student of computer technology in Chattogram Polytechnic
+                   .<br></br>I a student of Programming Hero Batch 5 . My home town is Kishoregonj but the purpose of <br></br>my educattion i stay at Chattogram . and i was addicted in fb use but now i overcome this bad habbit by learling Programming.
+                    </p>
+
                 <h5 className='text-primary'>My Goal :</h5>
-                <p> I am tanver sikdar , i am a student of computer technology in Chattogram Polytechnic. my goal is too simple, that is i am <br></br> want to be professional full stack Developer . And thats why i am trying to learn everythin too deeply .<br></br> And i thik i will be full stack developer one day by the help of God (Allah).</p>
+                <p>  My goal is too simple, that is i am want to be professional full stack Developer . <br></br> And thats why i am trying to learn everythin too deeply .<br></br> And i thik i will be full stack developer one day by the help of God (Allah).</p>
                 <p className='text-warning'>stay Cool , Stay Happy </p>
 
             </div>
