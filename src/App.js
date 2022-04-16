@@ -12,7 +12,7 @@ import ChackAppoints from './Pages/ChackAppoint/ChackAppoints';
 
 function App() {
   return (
-    <div className="App">
+    <div className="">
       <Header></Header>
      <Routes>
        <Route path='/home' element={<Home></Home>}></Route>

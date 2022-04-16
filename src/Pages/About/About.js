@@ -1,9 +1,24 @@
 import React from 'react';
+import myImg from '../../images/myimg.jpg'
+import './About.css'
 
 const About = () => {
     return (
-        <div>
-            <h1>this is my about page</h1>
+        <div className=''>
+
+            <h3 className='mt-5 text-primary welcome'>Hi Welcome to my About page !!</h3>
+
+            <div className='img'>
+                <img className='container mt-3 ' style={{ height: "380px", width: "500px" }} src={myImg} alt="" />
+            </div>
+            <h4 className='myName welcome'>Tanver Sikdar</h4>
+
+            <div className='container'>
+                <h5 className='text-primary'>My Goal :</h5>
+                <p> I am tanver sikdar , i am a student of computer technology in Chattogram Polytechnic. my goal is too simple, that is i am <br></br> want to be professional full stack Developer . And thats why i am trying to learn everythin too deeply .<br></br> And i thik i will be full stack developer one day by the help of God (Allah).</p>
+                <p className='text-warning'>stay Cool , Stay Happy </p>
+
+            </div>
         </div>
     );
 };

@@ -110,4 +110,10 @@
         width: 250px;
         height: 35px;
     }
+    
+}
+
+.myName{
+    color: blueviolet;
+    font-weight: 700;
 }

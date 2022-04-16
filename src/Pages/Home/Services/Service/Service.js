@@ -8,7 +8,7 @@ const Service = ({ appoint }) => {
     const { name, place, time, details, appointment_free, img } = appoint;
     return (
         <div className='col-md-4 mt-5'>
-            <Card style={{ width: '20rem' }} className="rounded shadow bg-primary">
+            <Card style={{ width: '22rem' }} className="rounded shadow bg-primary">
                 <Card.Img variant="top" src={img}/>
                 <Card.Body className='cardbody'>
                     <Card.Title>

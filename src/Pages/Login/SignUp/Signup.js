@@ -18,7 +18,7 @@ const Signup = () => {
           <div className='from-container'>
             <form onSubmit={logInUser}>
                 <div>
-                    <h3 className='from-title text-primary '>Please signUP</h3>
+                    <h3 className='from-title text-primary text-center'>Please signUp</h3>
                     <div className="input-group">
                         <input type="text" ref={EmailRef} name="" id="" required placeholder='Enter your Name' />
                     </div>
@@ -37,11 +37,11 @@ const Signup = () => {
                             loading && <Spinner animation="border" variant="warning" />
                         }
                     </p> */}
-                    <input className='from-submit bg-primary' type="submit" value="Login" />
+                    <input className='from-submit bg-primary' type="submit" value="SignUp" />
                 </div>
                 <div className='d-flex justify-content-around'>
                     <div>
-                        <Link className='form-link' to='/login'>signUp</Link>
+                        Already have an account ? <Link className='form-link' to='/login'>LogIn</Link>
                     </div>
                     {/* <div>
                         <button className='form-link btn btn-link' onClick={hendelForgetPssword}>Forget Password !</button>
