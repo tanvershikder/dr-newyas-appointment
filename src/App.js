@@ -8,6 +8,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import About from './Pages/About/About';
 import Login from './Pages/Login/Login/Login';
 import Signup from './Pages/Login/SignUp/Signup';
+import ChackAppoints from './Pages/ChackAppoint/ChackAppoints';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
        <Route path='/about' element={<About></About>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<Signup></Signup>}></Route>
+       <Route path='/chackapoint' element={<ChackAppoints></ChackAppoints>}></Route>
      </Routes>
      <Footer></Footer>
     </div>

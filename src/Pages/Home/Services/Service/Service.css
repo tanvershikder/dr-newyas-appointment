@@ -1,6 +1,9 @@
 .cardbody{
-    background-color: rgb(196, 202, 255);
+    background-color: rgb(224, 226, 245);
 }
 .name{
     color: rgb(61, 86, 167);
+}
+.buutonchackout{
+    color: rgb(89, 8, 114);
 }

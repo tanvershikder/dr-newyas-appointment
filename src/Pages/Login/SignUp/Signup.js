@@ -41,7 +41,7 @@ const Signup = () => {
                 </div>
                 <div className='d-flex justify-content-around'>
                     <div>
-                        <Link className='form-link' to='/login'>Login</Link>
+                        <Link className='form-link' to='/login'>signUp</Link>
                     </div>
                     {/* <div>
                         <button className='form-link btn btn-link' onClick={hendelForgetPssword}>Forget Password !</button>
