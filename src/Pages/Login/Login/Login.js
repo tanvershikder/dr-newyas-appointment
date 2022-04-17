@@ -1,5 +1,5 @@
 import { async } from '@firebase/util';
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Spinner } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
@@ -14,6 +14,7 @@ const Login = () => {
     const PasswordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
+    const [showpass,setShowpass] = useState(false);
 
     let from = location.state?.from?.pathname || "/";
 
@@ -66,7 +67,8 @@ const Login = () => {
         
 
     }
-
+    
+    
     return (
         <div className='from-container'>
             <form onSubmit={logInUser}>
@@ -76,8 +78,10 @@ const Login = () => {
                         <input type="email" ref={EmailRef} name="" id="" required placeholder='Enter your Email' />
                     </div>
                     <div className="input-group">
-                        <input type="password" ref={PasswordRef} name="" id="" required placeholder='Enter Password' />
+                        <input ref={PasswordRef} type={showpass ? "text" : "password"} name="" id="" required placeholder='Enter Password' />
                     </div>
+                    
+                    <input type="checkbox" name="" id="" onClick={()=>setShowpass(!showpass)}/> <span>see password</span>
 
                     <p>
                         {
