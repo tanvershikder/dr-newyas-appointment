@@ -4,7 +4,9 @@ import { Spinner } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import { ToastContainer, toast } from 'react-toastify';
 import './Login.css'
+import 'react-toastify/dist/ReactToastify.css';
 
 const Login = () => {
     const EmailRef = useRef('');
@@ -44,10 +46,10 @@ const Login = () => {
         const email = EmailRef.current.value
         if(email){
             await sendPasswordResetEmail(email);
-            console.log("email sent");
+            toast("email sent");
         }
         else{
-            console.log('enter your email')
+            toast('enter your email')
         }
         
 
@@ -84,8 +86,8 @@ const Login = () => {
 
                 
 
-                {/* <SocailLogin></SocailLogin>
-                <ToastContainer /> */}
+                {/* <SocailLogin></SocailLogin> */}
+                <ToastContainer /> 
 
             </form>
         </div>
