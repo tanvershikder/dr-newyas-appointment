@@ -10,6 +10,7 @@ import Login from './Pages/Login/Login/Login';
 import Signup from './Pages/Login/SignUp/Signup';
 import ChackAppoints from './Pages/ChackAppoint/ChackAppoints';
 import NotFound from './Pages/Shared/NotFound/NotFound';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
 
 function App() {
   return (
@@ -22,7 +23,11 @@ function App() {
        <Route path='/about' element={<About></About>}></Route>
        <Route path='/login' element={<Login></Login>}></Route>
        <Route path='/signup' element={<Signup></Signup>}></Route>
-       <Route path='/chackapoint' element={<ChackAppoints></ChackAppoints>}></Route>
+       <Route path='/chackapoint' element={
+         <RequireAuth>
+           <ChackAppoints></ChackAppoints>
+         </RequireAuth>
+       }></Route>
        <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
      <Footer></Footer>

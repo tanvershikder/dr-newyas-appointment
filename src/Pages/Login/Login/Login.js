@@ -15,6 +15,8 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    let from = location.state?.from?.pathname || "/";
+
     let errorElement;
     // user log in with email and password 
     const [
@@ -36,7 +38,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate("/home")
+        navigate(from, { replace: true });
     }
     if (error) {
         errorElement = <p className='text-danger'>Error: {error?.message}</p>
