@@ -7,6 +7,7 @@ import auth from '../../../firebase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import './Login.css'
 import 'react-toastify/dist/ReactToastify.css';
+import Loading from '../../Shared/Loading/Loading';
 
 const Login = () => {
     const EmailRef = useRef('');
@@ -22,11 +23,24 @@ const Login = () => {
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+    
 
     //password reset or forgot password
-    const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
         auth
       );
+
+
+      if (loading || sending) {
+        return <Loading></Loading>
+    }
+
+    if (user) {
+        navigate("/home")
+    }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
 
     const logInUser = (event) => {
         event.preventDefault();
@@ -35,12 +49,8 @@ const Login = () => {
 
         signInWithEmailAndPassword(email, password);
     }
-    if (user) {
-        navigate("/home")
-    }
-    if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
-    }
+    
+
 
     const hendelForgetPssword = async () => {
         const email = EmailRef.current.value
