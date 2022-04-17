@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { Spinner } from 'react-bootstrap';
+import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import auth from '../../../firebase.init';
 import './Login.css'
 
 const Login = () => {
@@ -9,11 +11,31 @@ const Login = () => {
     const navigate = useNavigate();
     const location = useLocation();
 
+    let errorElement;
+    // user log in with email and password 
+    const [
+        signInWithEmailAndPassword,
+        user,
+        loading,
+        error,
+    ] = useSignInWithEmailAndPassword(auth);
 
-    const logInUser = (event)=>{
+    const logInUser = (event) => {
         event.preventDefault();
         const email = EmailRef.current.value;
         const password = PasswordRef.current.value;
+
+        signInWithEmailAndPassword(email, password);
+    }
+    if (user) {
+        navigate("/home")
+    }
+    if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
+
+    const hendelForgetPssword = () => {
+
     }
 
     return (
@@ -40,11 +62,11 @@ const Login = () => {
                         <Link className='form-link' to='/signup'>Create new account !  </Link>
                     </div>
                     <div>
-                        <button className='form-link btn btn-link' >Forget Password !</button>
+                        <button className='form-link btn btn-link' onClick={hendelForgetPssword}>Forget Password !</button>
                     </div>
                 </div>
 
-                {/* {errorElement} */}
+                {errorElement}
 
                 {/* <SocailLogin></SocailLogin>
                 <ToastContainer /> */}
