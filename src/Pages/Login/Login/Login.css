@@ -1,13 +1,14 @@
 .from-container {
-    width: 600px;
+    padding: 20px;
+    width: 450px;
     margin: 0 auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    border: 1px solid #95A0A7;
     box-sizing: border-box;
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    box-shadow:0 4px 8px 0 rgba(138, 177, 66, 0.664), 0 6px 20px 0 rgba(201, 212, 54, 0.781);
 }
 
 
@@ -32,6 +33,7 @@
     box-sizing: border-box;
     border-radius: 5px;
     font-size: 20px;
+    box-shadow:0 4px 8px 0 rgba(138, 177, 66, 0.664), 0 3px 5px 0 rgba(70, 115, 173, 0.781);
     
 }
 
@@ -42,6 +44,7 @@
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 20px;
+    box-shadow:0 4px 8px 0 rgba(138, 177, 66, 0.664), 0 3px 5px 0 rgba(88, 233, 107, 0.781);    
     
 }
 
@@ -73,6 +76,7 @@
     border-radius: 5px;
     cursor: pointer;
     background-color: #d1e4f0;
+    box-shadow:0 4px 8px 0 rgba(138, 177, 66, 0.664), 0 3px 5px 0 rgba(182, 142, 55, 0.781);
 }
 
 .google-png {

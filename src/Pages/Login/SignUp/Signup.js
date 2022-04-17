@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { Spinner } from 'react-bootstrap';
+import SocailLogin from '../SocailLogin/SocailLogin';
 
 const Signup = () => {
     const NameRef = useRef('');
@@ -50,7 +51,7 @@ const Signup = () => {
 
     return (
         <div>
-            <div className='from-container'>
+            <div className='from-container App'>
                 <form onSubmit={logInUser}>
                     <div>
                         <h3 className='from-title text-primary text-center'>Please signUp</h3>
@@ -85,8 +86,7 @@ const Signup = () => {
 
                     {errorElement}
 
-                    {/* <SocailLogin></SocailLogin>
-                <ToastContainer /> */}
+                    <SocailLogin></SocailLogin>
 
                 </form>
             </div>

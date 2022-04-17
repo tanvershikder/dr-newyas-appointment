@@ -8,6 +8,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import './Login.css'
 import 'react-toastify/dist/ReactToastify.css';
 import Loading from '../../Shared/Loading/Loading';
+import SocailLogin from '../SocailLogin/SocailLogin';
 
 const Login = () => {
     const EmailRef = useRef('');
@@ -73,7 +74,7 @@ const Login = () => {
         <div className='from-container'>
             <form onSubmit={logInUser}>
                 <div>
-                    <h3 className='from-title text-primary '>Please Login</h3>
+                    <h3 className='from-title text-primary text-center'>Please Login</h3>
                     <div className="input-group">
                         <input type="email" ref={EmailRef} name="" id="" required placeholder='Enter your Email' />
                     </div>
@@ -102,7 +103,7 @@ const Login = () => {
 
                 
 
-                {/* <SocailLogin></SocailLogin> */}
+                
                 <ToastContainer /> 
 
             </form>
