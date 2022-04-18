@@ -11,11 +11,11 @@ const Carusol = () => {
         setIndex(selectedIndex);
     };
     return (
-        <div style={{ height: "500px" }} className="">
+        <div  className="">
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <img
-                        style={{ height: "500px" }}
+                        // style={{ height: "400px" }}
                         className="d-block w-100"
                         src={caruso2}
                         alt="First slide"
@@ -28,7 +28,7 @@ const Carusol = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        style={{ height: "500px" }}
+                        // style={{ height: "400px" }}
                         className="d-block w-100"
                         src={caruso3}
                         alt="Second slide"
@@ -42,7 +42,7 @@ const Carusol = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        style={{ height: "500px" }}
+                        // style={{ height: "400px" }}
                         className="d-block w-100"
                         src={caruso1}
                         alt="Third slide"

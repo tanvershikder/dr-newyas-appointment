@@ -9,7 +9,7 @@ const About = () => {
             <h3 className='mt-5 text-primary welcome'>Hi Welcome to my About page !!</h3>
 
             <div className='img'>
-                <img className='container mt-3 ' style={{ height: "380px", width: "500px" }} src={myImg} alt="" />
+                <img className='container mt-3 image' src={myImg} alt="" />
             </div>
             <h4 className='myName welcome'>Tanver Sikdar</h4>
 

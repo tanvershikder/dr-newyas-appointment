@@ -14,6 +14,8 @@ const Signup = () => {
     const location = useLocation();
     const [errorElement, setErrorElement] = useState()
 
+    let from = location.state?.from?.pathname || "/";
+
     // email password authentication 
     const [
         createUserWithEmailAndPassword,
@@ -28,6 +30,7 @@ const Signup = () => {
 
     if (user) {
         console.log(user);
+        navigate(from, { replace: true })
     }
 
     const logInUser = async (event) => {
@@ -43,7 +46,7 @@ const Signup = () => {
         }
         createUserWithEmailAndPassword(email, password)
         await updateProfile({ displayName: name });
-        navigate('/home')
+        
     }
 
     const [showPass, setShowPass] = useState(false);

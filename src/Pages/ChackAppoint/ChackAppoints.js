@@ -8,7 +8,7 @@ const ChackAppoints = () => {
                 <h1></h1>
                 <form >
                     <div>
-                        <h3 className='from-title text-primary text-center fw-bold m-3'>Take Serial and give the bellow Information</h3>
+                        <h3 className='from-title text-primary text-center fw-bold m-3'>To Get Serial give the bellow Information</h3>
                         <div className="input-group">
                             <input type="text" name="" id="" required placeholder='Enter your Name' />
                         </div>

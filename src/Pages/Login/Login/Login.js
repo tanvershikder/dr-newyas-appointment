@@ -103,7 +103,7 @@ const Login = () => {
 
                 
 
-                
+                <SocailLogin></SocailLogin>
                 <ToastContainer /> 
 
             </form>

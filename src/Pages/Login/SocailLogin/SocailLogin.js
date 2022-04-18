@@ -5,10 +5,13 @@ import github from '../../../images/social/github.png'
 import { useSignInWithFacebook, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import Loading from '../../Shared/Loading/Loading';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const SocailLogin = () => {
     const navigate = useNavigate()
+    const location = useLocation();
+
+    let from = location.state?.from?.pathname || "/";
 
     // sign in with google 
     const [signInWithGoogle, googleUser, googleLoading, GoogleError] = useSignInWithGoogle(auth);
@@ -27,7 +30,7 @@ const SocailLogin = () => {
     }
 
     if (googleUser || facebookUser || githubUser) {
-        navigate('/home')
+        navigate(from, { replace: true })
     }
 
     return (

@@ -1,10 +1,16 @@
 .cardbody{
-    background-color: rgb(224, 226, 245);
+    background-color: rgb(235, 236, 245);
     text-align: center;
 }
 .name{
-    color: rgb(61, 86, 167);
+    color: rgb(185, 40, 153);
+    font-family: sans-serif;
 }
 .buutonchackout{
     color: rgb(89, 8, 114);
+    font-weight: 500;
+    font-family:cursive;
+}
+.appoint{
+    color: rgb(240, 57, 209);
 }
