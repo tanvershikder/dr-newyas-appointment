@@ -3,6 +3,7 @@ import { Carousel } from 'react-bootstrap';
 import caruso1 from '../../../images/Doctor caruson img/carosoll3.png'
 import caruso2 from '../../../images/Doctor caruson img/carosoll2.jpg'
 import caruso3 from '../../../images/Doctor caruson img/carosoll1.png'
+import './Carusol.css'
 
 const Carusol = () => {
     const [index, setIndex] = useState(0);
@@ -15,8 +16,8 @@ const Carusol = () => {
             <Carousel activeIndex={index} onSelect={handleSelect}>
                 <Carousel.Item>
                     <img
-                        // style={{ height: "400px" }}
-                        className="d-block w-100"
+                        // style={{ height: "250px" }}
+                        className="d-block w-100 caruImg"
                         src={caruso2}
                         alt="First slide"
                     />
@@ -28,8 +29,8 @@ const Carusol = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        // style={{ height: "400px" }}
-                        className="d-block w-100"
+                        // style={{ height: "250px" }}
+                        className="d-block w-100 caruImg"
                         src={caruso3}
                         alt="Second slide"
                     />
@@ -42,8 +43,8 @@ const Carusol = () => {
                 </Carousel.Item>
                 <Carousel.Item>
                     <img
-                        // style={{ height: "400px" }}
-                        className="d-block w-100"
+                        // style={{ height: "250px" }}
+                        className="d-block w-100 caruImg"
                         src={caruso1}
                         alt="Third slide"
                     />
